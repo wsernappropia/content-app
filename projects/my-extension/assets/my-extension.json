@@ -1,0 +1,33 @@
+{
+  "$schema": "../../../extension.schema.json",
+  "$id": "my-extension",
+  "$version": "1.0.0",
+  "$vendor": "Seed Information Management",
+  "$name": "my-extension",
+  "$description": "ACA extension to include broking solution",
+  "$license": "MIT",
+
+  "routes": [
+    {
+      "id": "my.extension.route",
+      "path": "ext/my/route",
+      "component": "demo.component.id"
+    }
+  ],
+
+  "features": {
+    "navbar": [
+      {
+        "id": "my.extension.nav",
+        "items": [
+          {
+            "id": "my.extension.main",
+            "icon": "extension",
+            "title": "My Extension",
+            "route": "my.extension.route"
+          }
+        ]
+      }
+    ]
+  }
+}

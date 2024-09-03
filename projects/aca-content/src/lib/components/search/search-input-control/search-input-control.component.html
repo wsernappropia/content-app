@@ -1,0 +1,32 @@
+<div class="app-search-container">
+  <mat-form-field class="app-input-form-field" appearance="outline">
+
+    <button
+      mat-icon-button
+      matPrefix
+      class="app-search-button"
+      (click)="searchSubmit(searchTerm)"
+      [title]="'SEARCH.BUTTON.TOOLTIP' | translate"
+    >
+      <mat-icon [attr.aria-label]="'SEARCH.BUTTON.ARIA-LABEL' | translate">search</mat-icon>
+    </button>
+
+    <input
+      matInput
+      #searchInput
+      [attr.aria-label]="'SEARCH.INPUT.ARIA-LABEL' | translate"
+      [type]="inputType"
+      id="app-control-input"
+      [(ngModel)]="searchTerm"
+      (ngModelChange)="inputChange($event)"
+      (keyup.enter)="searchSubmit($event)"
+      [placeholder]="'SEARCH.INPUT.PLACEHOLDER' | translate"
+      autocomplete="off"
+    />
+    <div matSuffix>
+      <button mat-icon-button (click)="clear()">
+        <mat-icon *ngIf="searchTerm.length" class="app-suffix-icon">clear</mat-icon>
+      </button>
+    </div>
+  </mat-form-field>
+</div>

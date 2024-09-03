@@ -1,0 +1,9 @@
+<div class="user-profile">
+  <h2>User Profile</h2>
+  <div class="profile-info">
+    <p><strong>Name:</strong> {{ user.name }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Bio:</strong> {{ user.bio }}</p>
+  </div>
+  <button (click)="updateProfile()">Update Profile</button>
+</div>
